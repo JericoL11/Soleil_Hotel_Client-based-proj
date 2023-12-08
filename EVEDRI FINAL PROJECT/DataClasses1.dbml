@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HotelDeLuna" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BLAKE\SQLEXPRESS;Initial Catalog=HotelDeLuna;Integrated Security=True" SettingsObjectName="EVEDRI_FINAL_PROJECT.Properties.Settings" SettingsPropertyName="HotelDeLunaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_Admin" Member="tbl_Admins">
+    <Type Name="tbl_Admin">
+      <Column Name="adminId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="admin_User" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="admin_Pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Staff" Member="tbl_Staffs">
+    <Type Name="tbl_Staff">
+      <Column Name="staff_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="position" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="homeAddress" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_account" Member="tbl_accounts">
+    <Type Name="tbl_account">
+      <Column Name="acc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="acc_User" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="acc_Pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Rooms" Member="tbl_Rooms">
+    <Type Name="tbl_Room">
+      <Column Name="room_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="room_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="room_number" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="personCount" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Guest_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Guest_tbl_Room" Member="tbl_Guest" ThisKey="Guest_Id" OtherKey="Guest_Id" Type="tbl_Guest" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CheckIn" Member="tbl_CheckIns">
+    <Type Name="tbl_CheckIn">
+      <Column Name="checkIn_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Total_Amount" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="checkIn_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Guest_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Guest_tbl_CheckIn" Member="tbl_Guest" ThisKey="Guest_Id" OtherKey="Guest_Id" Type="tbl_Guest" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CheckOut" Member="tbl_CheckOuts">
+    <Type Name="tbl_CheckOut">
+      <Column Name="checkOut_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="checkOut_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaysCount" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Guest_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Guest_tbl_CheckOut" Member="tbl_Guest" ThisKey="Guest_Id" OtherKey="Guest_Id" Type="tbl_Guest" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Guest" Member="tbl_Guests">
+    <Type Name="tbl_Guest">
+      <Column Name="Guest_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoomType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="RoomNo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PersonCount" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckIn" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckOut" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="NoOfDays" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IsSettled" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IsClean" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="tbl_Guest_tbl_Room" Member="tbl_Rooms" ThisKey="Guest_Id" OtherKey="Guest_Id" Type="tbl_Room" />
+      <Association Name="tbl_Guest_tbl_CheckIn" Member="tbl_CheckIns" ThisKey="Guest_Id" OtherKey="Guest_Id" Type="tbl_CheckIn" />
+      <Association Name="tbl_Guest_tbl_CheckOut" Member="tbl_CheckOuts" ThisKey="Guest_Id" OtherKey="Guest_Id" Type="tbl_CheckOut" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_admin_Guest" Method="SP_admin_Guest">
+    <ElementType Name="SP_admin_GuestResult">
+      <Column Name="[Id no]" Member="Id_no" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(101) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_User_Craete_Guest" Method="SP_User_Craete_Guest">
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="phoneNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_admin_staff" Method="SP_admin_staff">
+    <ElementType Name="SP_admin_staffResult">
+      <Column Name="staff_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(101) NOT NULL" CanBeNull="false" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Home Address]" Member="Home_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_User_Transact_Rooms" Method="SP_User_Transact_Rooms">
+    <Parameter Name="guestId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="room_type" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="room_number" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="guestCount" Type="System.String" DbType="NVarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_User_Transact_CheckOut" Method="SP_User_Transact_CheckOut">
+    <Parameter Name="guestId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="checkOut" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DaysCount" Parameter="daysCount" Type="System.String" DbType="NVarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_User_Transact_CheckIn" Method="SP_User_Transact_CheckIn">
+    <Parameter Name="guestId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="totalAmount" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="checkIn_Date" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_user_checkOutView" Method="SP_user_checkOutView">
+    <ElementType Name="SP_user_checkOutViewResult">
+      <Column Name="[Id no]" Member="Id_no" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(101) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoomType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="RoomNo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckIn" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckOut" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_user_SettleMent" Method="SP_user_SettleMent">
+    <Parameter Name="guestId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_user_SettleMentResult">
+      <Column Name="[Id no]" Member="Id_no" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(101) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoomType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="RoomNo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckIn" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckOut" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_admin_Records" Method="SP_admin_Records">
+    <ElementType Name="SP_admin_RecordsResult">
+      <Column Name="[Id no]" Member="Id_no" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(101) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoomType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="RoomNo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PersonCount" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckIn" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckOut" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="NoOfDays" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IsSettled" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="cleaned" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_user_ViewForClean" Method="SP_user_ViewForClean">
+    <ElementType Name="SP_user_ViewForCleanResult">
+      <Column Name="[Id no]" Member="Id_no" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(101) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoomType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="RoomNo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckIn" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckOut" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IsSettled" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Cleaned" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_user_CleanSettleMent" Method="SP_user_CleanSettleMent">
+    <Parameter Name="guestId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_user_CleanSettleMentResult">
+      <Column Name="[Id no]" Member="Id_no" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(101) NOT NULL" CanBeNull="false" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoomType" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="RoomNo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckIn" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CheckOut" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
