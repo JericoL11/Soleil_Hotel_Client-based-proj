@@ -60,13 +60,34 @@ namespace EVEDRI_FINAL_PROJECT
         {
 
         }
+        void Cash_Elements_False()
+        {
+            //hiding of cash elements
+            btn_amount.Visible = false;
+            lbl_CoH.Visible = false;
+            txt_cashOnHand.Visible = false;
+
+        }
+        void Cash_Elements_True()
+        {
+            //hiding of cash elements
+            btn_amount.Visible = true;
+            lbl_CoH.Visible = true;
+            txt_cashOnHand.Visible = true;
+
+        }
 
         private void Form4_Load(object sender, EventArgs e)
         {
             cmb_roomNumber.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_numGuest.DropDownStyle = ComboBoxStyle.DropDownList;
             dtp_checkin.Enabled = false;
-      
+
+            //hiding of amount methods
+
+           Cash_Elements_False();
+
+            pnl_credit.Visible = false; 
 
             lbl_guest_Id.Text = guestID.ToString();
 
@@ -538,6 +559,21 @@ namespace EVEDRI_FINAL_PROJECT
         {
 
         }
+
+        private void rbtn_Cash_Click(object sender, EventArgs e)
+        {
+            Cash_Elements_True();
+            pnl_credit.Visible = false;
+        }
+
+        private void rbtn_Credit_Click(object sender, EventArgs e)
+        {
+            Cash_Elements_False();
+            pnl_credit.Visible = true;
+        }
     }
 }
   
+
+
+//DONE NA WORK NAS ELEMENT FUNTIONS ESPECIALLY SA MGA COMPUTATION SA  RATE UG PENALTY
