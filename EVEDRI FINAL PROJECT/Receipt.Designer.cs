@@ -58,6 +58,8 @@
             this.lbl_guestId = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_modePayment = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(246, 251);
+            this.label1.Location = new System.Drawing.Point(248, 206);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 31);
@@ -81,7 +83,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(164, 348);
+            this.label2.Location = new System.Drawing.Point(170, 308);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 22);
@@ -94,7 +96,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(164, 384);
+            this.label3.Location = new System.Drawing.Point(170, 344);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 22);
@@ -107,7 +109,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(164, 423);
+            this.label4.Location = new System.Drawing.Point(170, 383);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 22);
@@ -120,7 +122,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Orange;
-            this.label6.Location = new System.Drawing.Point(164, 462);
+            this.label6.Location = new System.Drawing.Point(170, 422);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 22);
@@ -133,7 +135,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Orange;
-            this.label7.Location = new System.Drawing.Point(164, 501);
+            this.label7.Location = new System.Drawing.Point(170, 461);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 22);
@@ -147,7 +149,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Orange;
-            this.label8.Location = new System.Drawing.Point(164, 540);
+            this.label8.Location = new System.Drawing.Point(170, 500);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(151, 22);
@@ -160,7 +162,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Orange;
-            this.label9.Location = new System.Drawing.Point(164, 576);
+            this.label9.Location = new System.Drawing.Point(170, 536);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 22);
@@ -173,7 +175,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Orange;
-            this.label10.Location = new System.Drawing.Point(164, 617);
+            this.label10.Location = new System.Drawing.Point(170, 577);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 22);
@@ -187,7 +189,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Orange;
-            this.label11.Location = new System.Drawing.Point(164, 663);
+            this.label11.Location = new System.Drawing.Point(170, 623);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 22);
@@ -200,7 +202,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Orange;
-            this.label12.Location = new System.Drawing.Point(164, 705);
+            this.label12.Location = new System.Drawing.Point(170, 709);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(131, 22);
@@ -214,7 +216,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Orange;
-            this.label13.Location = new System.Drawing.Point(164, 740);
+            this.label13.Location = new System.Drawing.Point(170, 744);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(126, 22);
@@ -244,7 +246,7 @@
             this.lbl_fname.BackColor = System.Drawing.Color.Transparent;
             this.lbl_fname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fname.ForeColor = System.Drawing.Color.White;
-            this.lbl_fname.Location = new System.Drawing.Point(367, 350);
+            this.lbl_fname.Location = new System.Drawing.Point(373, 310);
             this.lbl_fname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_fname.Name = "lbl_fname";
             this.lbl_fname.Size = new System.Drawing.Size(18, 20);
@@ -257,7 +259,7 @@
             this.lbl_lname.BackColor = System.Drawing.Color.Transparent;
             this.lbl_lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_lname.ForeColor = System.Drawing.Color.White;
-            this.lbl_lname.Location = new System.Drawing.Point(367, 386);
+            this.lbl_lname.Location = new System.Drawing.Point(373, 346);
             this.lbl_lname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_lname.Name = "lbl_lname";
             this.lbl_lname.Size = new System.Drawing.Size(18, 20);
@@ -270,7 +272,7 @@
             this.lbl_email.BackColor = System.Drawing.Color.Transparent;
             this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_email.ForeColor = System.Drawing.Color.White;
-            this.lbl_email.Location = new System.Drawing.Point(367, 425);
+            this.lbl_email.Location = new System.Drawing.Point(373, 385);
             this.lbl_email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(18, 20);
@@ -283,7 +285,7 @@
             this.lbl_phoneNumber.BackColor = System.Drawing.Color.Transparent;
             this.lbl_phoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_phoneNumber.ForeColor = System.Drawing.Color.White;
-            this.lbl_phoneNumber.Location = new System.Drawing.Point(367, 464);
+            this.lbl_phoneNumber.Location = new System.Drawing.Point(373, 424);
             this.lbl_phoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_phoneNumber.Name = "lbl_phoneNumber";
             this.lbl_phoneNumber.Size = new System.Drawing.Size(18, 20);
@@ -296,7 +298,7 @@
             this.lbl_roomType.BackColor = System.Drawing.Color.Transparent;
             this.lbl_roomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_roomType.ForeColor = System.Drawing.Color.White;
-            this.lbl_roomType.Location = new System.Drawing.Point(367, 503);
+            this.lbl_roomType.Location = new System.Drawing.Point(373, 463);
             this.lbl_roomType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_roomType.Name = "lbl_roomType";
             this.lbl_roomType.Size = new System.Drawing.Size(18, 20);
@@ -309,7 +311,7 @@
             this.lbl_numberGuest.BackColor = System.Drawing.Color.Transparent;
             this.lbl_numberGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_numberGuest.ForeColor = System.Drawing.Color.White;
-            this.lbl_numberGuest.Location = new System.Drawing.Point(367, 542);
+            this.lbl_numberGuest.Location = new System.Drawing.Point(373, 502);
             this.lbl_numberGuest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_numberGuest.Name = "lbl_numberGuest";
             this.lbl_numberGuest.Size = new System.Drawing.Size(18, 20);
@@ -322,7 +324,7 @@
             this.lbl_roomNumber.BackColor = System.Drawing.Color.Transparent;
             this.lbl_roomNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_roomNumber.ForeColor = System.Drawing.Color.White;
-            this.lbl_roomNumber.Location = new System.Drawing.Point(367, 578);
+            this.lbl_roomNumber.Location = new System.Drawing.Point(373, 538);
             this.lbl_roomNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_roomNumber.Name = "lbl_roomNumber";
             this.lbl_roomNumber.Size = new System.Drawing.Size(18, 20);
@@ -335,7 +337,7 @@
             this.lbl_CheckInDate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_CheckInDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_CheckInDate.ForeColor = System.Drawing.Color.White;
-            this.lbl_CheckInDate.Location = new System.Drawing.Point(367, 617);
+            this.lbl_CheckInDate.Location = new System.Drawing.Point(373, 577);
             this.lbl_CheckInDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_CheckInDate.Name = "lbl_CheckInDate";
             this.lbl_CheckInDate.Size = new System.Drawing.Size(20, 22);
@@ -349,7 +351,7 @@
             this.lbl_CheckoutDate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_CheckoutDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_CheckoutDate.ForeColor = System.Drawing.Color.White;
-            this.lbl_CheckoutDate.Location = new System.Drawing.Point(367, 663);
+            this.lbl_CheckoutDate.Location = new System.Drawing.Point(373, 623);
             this.lbl_CheckoutDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_CheckoutDate.Name = "lbl_CheckoutDate";
             this.lbl_CheckoutDate.Size = new System.Drawing.Size(20, 22);
@@ -362,7 +364,7 @@
             this.lbl_Totalpayment.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Totalpayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Totalpayment.ForeColor = System.Drawing.Color.White;
-            this.lbl_Totalpayment.Location = new System.Drawing.Point(365, 705);
+            this.lbl_Totalpayment.Location = new System.Drawing.Point(371, 709);
             this.lbl_Totalpayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Totalpayment.Name = "lbl_Totalpayment";
             this.lbl_Totalpayment.Size = new System.Drawing.Size(20, 22);
@@ -375,7 +377,7 @@
             this.lbl_cashOnhand.BackColor = System.Drawing.Color.Transparent;
             this.lbl_cashOnhand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cashOnhand.ForeColor = System.Drawing.Color.White;
-            this.lbl_cashOnhand.Location = new System.Drawing.Point(367, 740);
+            this.lbl_cashOnhand.Location = new System.Drawing.Point(373, 744);
             this.lbl_cashOnhand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cashOnhand.Name = "lbl_cashOnhand";
             this.lbl_cashOnhand.Size = new System.Drawing.Size(20, 22);
@@ -389,7 +391,7 @@
             this.lbl_change.BackColor = System.Drawing.Color.Transparent;
             this.lbl_change.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_change.ForeColor = System.Drawing.Color.White;
-            this.lbl_change.Location = new System.Drawing.Point(365, 779);
+            this.lbl_change.Location = new System.Drawing.Point(371, 783);
             this.lbl_change.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_change.Name = "lbl_change";
             this.lbl_change.Size = new System.Drawing.Size(18, 20);
@@ -403,7 +405,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Orange;
-            this.label15.Location = new System.Drawing.Point(164, 779);
+            this.label15.Location = new System.Drawing.Point(170, 783);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(124, 22);
@@ -433,7 +435,7 @@
             this.lbl_guestId.BackColor = System.Drawing.Color.Transparent;
             this.lbl_guestId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_guestId.ForeColor = System.Drawing.Color.White;
-            this.lbl_guestId.Location = new System.Drawing.Point(367, 311);
+            this.lbl_guestId.Location = new System.Drawing.Point(373, 271);
             this.lbl_guestId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_guestId.Name = "lbl_guestId";
             this.lbl_guestId.Size = new System.Drawing.Size(20, 22);
@@ -446,7 +448,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Orange;
-            this.label14.Location = new System.Drawing.Point(164, 311);
+            this.label14.Location = new System.Drawing.Point(170, 271);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 22);
@@ -458,12 +460,38 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::EVEDRI_FINAL_PROJECT.Properties.Resources.logo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(108, -59);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(391, 296);
             this.pictureBox1.TabIndex = 74;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // lbl_modePayment
+            // 
+            this.lbl_modePayment.AutoSize = true;
+            this.lbl_modePayment.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_modePayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_modePayment.ForeColor = System.Drawing.Color.White;
+            this.lbl_modePayment.Location = new System.Drawing.Point(374, 667);
+            this.lbl_modePayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_modePayment.Name = "lbl_modePayment";
+            this.lbl_modePayment.Size = new System.Drawing.Size(20, 22);
+            this.lbl_modePayment.TabIndex = 75;
+            this.lbl_modePayment.Text = "_";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Orange;
+            this.label16.Location = new System.Drawing.Point(171, 667);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(149, 22);
+            this.label16.TabIndex = 76;
+            this.label16.Text = "Mode of Payment";
             // 
             // Receipt
             // 
@@ -474,6 +502,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(595, 938);
             this.ControlBox = false;
+            this.Controls.Add(this.lbl_modePayment);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.lbl_guestId);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btn_save);
@@ -551,5 +581,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_modePayment;
+        private System.Windows.Forms.Label label16;
     }
 }

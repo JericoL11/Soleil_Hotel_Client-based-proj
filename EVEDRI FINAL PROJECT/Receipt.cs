@@ -47,6 +47,8 @@ namespace EVEDRI_FINAL_PROJECT
 
         public int numberDays { get; set; }
 
+        public string modePayment { get; set; }
+
 
      
 
@@ -67,6 +69,7 @@ namespace EVEDRI_FINAL_PROJECT
             lbl_roomNumber.Text = RoomNum;
             lbl_CheckInDate.Text = CheckIn.ToString();
             lbl_CheckoutDate.Text = CheckOut.ToString();
+            lbl_modePayment.Text = modePayment;
             lbl_Totalpayment.Text = totalPayment.ToString("C");
             lbl_cashOnhand.Text = cashOnhand.ToString("C");
             lbl_change.Text = totalChange.ToString("C");

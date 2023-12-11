@@ -54,6 +54,7 @@ namespace EVEDRI_FINAL_PROJECT
 
         void refresh_Data()
         {
+
             cmb_Type.SelectedIndex = 0;
             dgv_CheckOutSettlement.DataSource = _data.SP_user_checkOutView();
         }
@@ -61,6 +62,7 @@ namespace EVEDRI_FINAL_PROJECT
         private void button1_Click(object sender, EventArgs e)
         {
             refresh_Data();
+            txt_ID.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -111,8 +113,10 @@ namespace EVEDRI_FINAL_PROJECT
                     }
                     else if (FindID != null)
                     {
+                    
                         Success();
                         _data.SP_user_SettleMent(Convert.ToInt32(txt_ID.Text));
+                        txt_ID.Clear();
                     }
                     else
                     {
@@ -185,6 +189,7 @@ namespace EVEDRI_FINAL_PROJECT
                     }
                     else if (FindID != null)
                     {
+ 
                         Success();
                         _data.SP_user_CleanSettleMent(Convert.ToInt32(txt_ID.Text));
                     }

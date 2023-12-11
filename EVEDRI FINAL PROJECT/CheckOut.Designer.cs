@@ -182,9 +182,9 @@
             this.BackgroundImage = global::EVEDRI_FINAL_PROJECT.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1142, 785);
+            this.Controls.Add(this.btn_done);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_Type);
-            this.Controls.Add(this.btn_done);
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_back);
