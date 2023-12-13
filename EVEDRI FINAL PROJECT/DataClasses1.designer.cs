@@ -215,6 +215,41 @@ namespace EVEDRI_FINAL_PROJECT
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), guestId);
 			return ((ISingleResult<SP_user_CleanSettleMentResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Admin_DelEmployee")]
+		public int SP_Admin_DelEmployee([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> emp_Id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), emp_Id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Admin_addUser")]
+		public int SP_Admin_addUser([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string passsword)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, passsword);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Admin_DelUser")]
+		public int SP_Admin_DelUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Id", DbType="Int")] System.Nullable<int> id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Admin_ViewAccounts")]
+		public ISingleResult<SP_Admin_ViewAccountsResult> SP_Admin_ViewAccounts()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<SP_Admin_ViewAccountsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_Admin_addEmployee")]
+		public int SP_Admin_addEmployee([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string fname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string lname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string position, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string phone, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(30)")] string address)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fname, lname, position, phone, email, address);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Admin")]
@@ -2685,6 +2720,68 @@ namespace EVEDRI_FINAL_PROJECT
 				if ((this._CheckOut != value))
 				{
 					this._CheckOut = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SP_Admin_ViewAccountsResult
+	{
+		
+		private int _acc_id;
+		
+		private string _Username;
+		
+		private string _Password;
+		
+		public SP_Admin_ViewAccountsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_acc_id", DbType="Int NOT NULL")]
+		public int acc_id
+		{
+			get
+			{
+				return this._acc_id;
+			}
+			set
+			{
+				if ((this._acc_id != value))
+				{
+					this._acc_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(50)")]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this._Username = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this._Password = value;
 				}
 			}
 		}

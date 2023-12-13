@@ -104,6 +104,8 @@ namespace EVEDRI_FINAL_PROJECT
             btn_back.Enabled = true;
             btn_submit.Enabled = true;
         }
+
+      
         void Background_False()
         {
             dtp_checkOut.Enabled = false;
@@ -118,7 +120,7 @@ namespace EVEDRI_FINAL_PROJECT
 
         private void Form4_Load(object sender, EventArgs e)
         {
-           
+            btn_picClose.Visible = false;
             cmb_roomNumber.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_numGuest.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_roomType.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -1119,6 +1121,20 @@ e.KeyChar != '.')
             {
                 e.Handled = true; // Ignore the key press
             }
+        }
+
+        private void btn_policy_Click(object sender, EventArgs e)
+        {
+            pic_policy.Visible = true;
+            btn_picClose.Visible = true;
+            Background_False();
+        }
+
+        private void btn_picClose_Click(object sender, EventArgs e)
+        {
+            pic_policy.Visible = false;
+            btn_picClose.Visible = false;
+            Background_True();
         }
     }
 }

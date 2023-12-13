@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_addEmployee = new System.Windows.Forms.Button();
             this.btn_Cdetails = new System.Windows.Forms.Button();
             this.btn_employee = new System.Windows.Forms.Button();
             this.dgv_admin = new System.Windows.Forms.DataGridView();
@@ -38,15 +39,28 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Hide = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Accounts = new System.Windows.Forms.Button();
+            this.pnl_userAcc = new System.Windows.Forms.Panel();
+            this.btn_delUserAccs = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_accID = new System.Windows.Forms.TextBox();
+            this.pnl_emp = new System.Windows.Forms.Panel();
+            this.btn_delEmp = new System.Windows.Forms.Button();
+            this.txt_delEmp = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_admin)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_userAcc.SuspendLayout();
+            this.pnl_emp.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btn_Accounts);
+            this.panel1.Controls.Add(this.btn_addEmployee);
             this.panel1.Controls.Add(this.btn_Cdetails);
             this.panel1.Controls.Add(this.btn_employee);
             this.panel1.Location = new System.Drawing.Point(33, 287);
@@ -55,13 +69,28 @@
             this.panel1.Size = new System.Drawing.Size(333, 359);
             this.panel1.TabIndex = 0;
             // 
+            // btn_addEmployee
+            // 
+            this.btn_addEmployee.BackColor = System.Drawing.Color.Orange;
+            this.btn_addEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addEmployee.ForeColor = System.Drawing.Color.White;
+            this.btn_addEmployee.Location = new System.Drawing.Point(44, 291);
+            this.btn_addEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_addEmployee.Name = "btn_addEmployee";
+            this.btn_addEmployee.Size = new System.Drawing.Size(255, 63);
+            this.btn_addEmployee.TabIndex = 4;
+            this.btn_addEmployee.Text = "Add Accounts";
+            this.btn_addEmployee.UseVisualStyleBackColor = false;
+            this.btn_addEmployee.Click += new System.EventHandler(this.btn_addEmployee_Click);
+            // 
             // btn_Cdetails
             // 
             this.btn_Cdetails.BackColor = System.Drawing.Color.Orange;
             this.btn_Cdetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Cdetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cdetails.ForeColor = System.Drawing.Color.White;
-            this.btn_Cdetails.Location = new System.Drawing.Point(44, 61);
+            this.btn_Cdetails.Location = new System.Drawing.Point(44, 30);
             this.btn_Cdetails.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cdetails.Name = "btn_Cdetails";
             this.btn_Cdetails.Size = new System.Drawing.Size(255, 63);
@@ -76,7 +105,7 @@
             this.btn_employee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_employee.ForeColor = System.Drawing.Color.White;
-            this.btn_employee.Location = new System.Drawing.Point(44, 227);
+            this.btn_employee.Location = new System.Drawing.Point(44, 117);
             this.btn_employee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_employee.Name = "btn_employee";
             this.btn_employee.Size = new System.Drawing.Size(255, 63);
@@ -139,9 +168,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btn_Show);
             this.panel2.Controls.Add(this.btn_Hide);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(421, 177);
             this.panel2.Name = "panel2";
@@ -176,6 +205,115 @@
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_Accounts
+            // 
+            this.btn_Accounts.BackColor = System.Drawing.Color.Orange;
+            this.btn_Accounts.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Accounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Accounts.ForeColor = System.Drawing.Color.White;
+            this.btn_Accounts.Location = new System.Drawing.Point(44, 205);
+            this.btn_Accounts.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Accounts.Name = "btn_Accounts";
+            this.btn_Accounts.Size = new System.Drawing.Size(255, 63);
+            this.btn_Accounts.TabIndex = 5;
+            this.btn_Accounts.Text = "User Accounts";
+            this.btn_Accounts.UseVisualStyleBackColor = false;
+            this.btn_Accounts.Click += new System.EventHandler(this.btn_Accounts_Click);
+            // 
+            // pnl_userAcc
+            // 
+            this.pnl_userAcc.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_userAcc.Controls.Add(this.btn_delUserAccs);
+            this.pnl_userAcc.Controls.Add(this.txt_accID);
+            this.pnl_userAcc.Controls.Add(this.label2);
+            this.pnl_userAcc.ForeColor = System.Drawing.Color.White;
+            this.pnl_userAcc.Location = new System.Drawing.Point(421, 177);
+            this.pnl_userAcc.Name = "pnl_userAcc";
+            this.pnl_userAcc.Size = new System.Drawing.Size(501, 63);
+            this.pnl_userAcc.TabIndex = 71;
+            this.pnl_userAcc.Visible = false;
+            // 
+            // btn_delUserAccs
+            // 
+            this.btn_delUserAccs.AutoSize = true;
+            this.btn_delUserAccs.BackColor = System.Drawing.Color.Orange;
+            this.btn_delUserAccs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_delUserAccs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delUserAccs.Location = new System.Drawing.Point(316, 18);
+            this.btn_delUserAccs.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_delUserAccs.Name = "btn_delUserAccs";
+            this.btn_delUserAccs.Size = new System.Drawing.Size(132, 34);
+            this.btn_delUserAccs.TabIndex = 69;
+            this.btn_delUserAccs.Text = "Delete";
+            this.btn_delUserAccs.UseVisualStyleBackColor = false;
+            this.btn_delUserAccs.Click += new System.EventHandler(this.btn_delUserAccs_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 22);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "User Account ID:";
+            // 
+            // txt_accID
+            // 
+            this.txt_accID.Location = new System.Drawing.Point(184, 23);
+            this.txt_accID.MaxLength = 6;
+            this.txt_accID.Name = "txt_accID";
+            this.txt_accID.Size = new System.Drawing.Size(100, 22);
+            this.txt_accID.TabIndex = 70;
+            this.txt_accID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_accID_KeyPress);
+            // 
+            // pnl_emp
+            // 
+            this.pnl_emp.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_emp.Controls.Add(this.btn_delEmp);
+            this.pnl_emp.Controls.Add(this.txt_delEmp);
+            this.pnl_emp.Controls.Add(this.label3);
+            this.pnl_emp.ForeColor = System.Drawing.Color.White;
+            this.pnl_emp.Location = new System.Drawing.Point(421, 177);
+            this.pnl_emp.Name = "pnl_emp";
+            this.pnl_emp.Size = new System.Drawing.Size(501, 63);
+            this.pnl_emp.TabIndex = 72;
+            this.pnl_emp.Visible = false;
+            // 
+            // btn_delEmp
+            // 
+            this.btn_delEmp.AutoSize = true;
+            this.btn_delEmp.BackColor = System.Drawing.Color.Orange;
+            this.btn_delEmp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_delEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delEmp.Location = new System.Drawing.Point(316, 18);
+            this.btn_delEmp.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_delEmp.Name = "btn_delEmp";
+            this.btn_delEmp.Size = new System.Drawing.Size(132, 34);
+            this.btn_delEmp.TabIndex = 69;
+            this.btn_delEmp.Text = "Delete";
+            this.btn_delEmp.UseVisualStyleBackColor = false;
+            this.btn_delEmp.Click += new System.EventHandler(this.btn_delEmp_Click);
+            // 
+            // txt_delEmp
+            // 
+            this.txt_delEmp.Location = new System.Drawing.Point(184, 23);
+            this.txt_delEmp.MaxLength = 6;
+            this.txt_delEmp.Name = "txt_delEmp";
+            this.txt_delEmp.Size = new System.Drawing.Size(100, 22);
+            this.txt_delEmp.TabIndex = 70;
+            this.txt_delEmp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_delEmp_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 22);
+            this.label3.TabIndex = 68;
+            this.label3.Text = "Employee ID:";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,7 +322,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1436, 754);
             this.ControlBox = false;
+            this.Controls.Add(this.pnl_emp);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnl_userAcc);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.dgv_admin);
             this.Controls.Add(this.panel1);
@@ -204,6 +344,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnl_userAcc.ResumeLayout(false);
+            this.pnl_userAcc.PerformLayout();
+            this.pnl_emp.ResumeLayout(false);
+            this.pnl_emp.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -220,5 +364,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Hide;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_addEmployee;
+        private System.Windows.Forms.Button btn_Accounts;
+        private System.Windows.Forms.Panel pnl_userAcc;
+        private System.Windows.Forms.TextBox txt_accID;
+        private System.Windows.Forms.Button btn_delUserAccs;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnl_emp;
+        private System.Windows.Forms.Button btn_delEmp;
+        private System.Windows.Forms.TextBox txt_delEmp;
+        private System.Windows.Forms.Label label3;
     }
 }

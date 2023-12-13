@@ -26,7 +26,7 @@ namespace EVEDRI_FINAL_PROJECT
            );
         public int ID { get; set; }
 
-        const int minLength = 11; // Minimum length required
+        const int minLength = 9; // Minimum length required
 
         public CheckInForm()
         {
@@ -39,10 +39,6 @@ namespace EVEDRI_FINAL_PROJECT
 
         private void btn_next_Click(object sender, EventArgs e)
         {
-            CheckTextboxes();
-        }
-        void CheckTextboxes()
-        {
             if (string.IsNullOrWhiteSpace(txt_fname.Text) || string.IsNullOrWhiteSpace(txt_lname.Text) || string.IsNullOrWhiteSpace(txt_phone.Text) || string.IsNullOrWhiteSpace(txt_email.Text))
             {
                 fill_out();
@@ -50,7 +46,7 @@ namespace EVEDRI_FINAL_PROJECT
             else
             {
                 //for txtphone
-                  
+
                 if (txt_phone.Text.Length < minLength)
                 {
 
@@ -80,7 +76,7 @@ namespace EVEDRI_FINAL_PROJECT
 
             }
         }
-
+   
         //message
         public void fill_out()
         {
@@ -202,6 +198,15 @@ namespace EVEDRI_FINAL_PROJECT
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
           e.KeyChar != '.')
+            {
+                e.Handled = true; // Ignore the key press
+            }
+        }
+
+        private void txt_guestID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      e.KeyChar != '.')
             {
                 e.Handled = true; // Ignore the key press
             }

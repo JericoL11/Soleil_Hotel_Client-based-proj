@@ -59,6 +59,8 @@
             this.rbtn_Credit = new System.Windows.Forms.RadioButton();
             this.rbtn_Cash = new System.Windows.Forms.RadioButton();
             this.pnl_credit = new System.Windows.Forms.Panel();
+            this.btn_saveCredit = new System.Windows.Forms.Button();
+            this.dtp_creditDate = new System.Windows.Forms.DateTimePicker();
             this.btn_creditBack = new System.Windows.Forms.Button();
             this.txt_CvvCard = new System.Windows.Forms.TextBox();
             this.txt_NameCredit = new System.Windows.Forms.TextBox();
@@ -69,8 +71,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnl_Selection = new System.Windows.Forms.Panel();
-            this.lbl_maximum = new System.Windows.Forms.Label();
             this.lbl_penalty = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lbl_roomPayment = new System.Windows.Forms.Label();
+            this.lbl_maximum = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
@@ -83,6 +93,7 @@
             this.cmb_roomType = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.btn_reserved = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -90,23 +101,16 @@
             this.lbl_GuestNo = new System.Windows.Forms.Label();
             this.lbl_roomType = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.lbl_roomPayment = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.dtp_creditDate = new System.Windows.Forms.DateTimePicker();
-            this.btn_saveCredit = new System.Windows.Forms.Button();
             this.lbl_credit = new System.Windows.Forms.Label();
+            this.btn_policy = new System.Windows.Forms.Button();
+            this.pic_policy = new System.Windows.Forms.PictureBox();
+            this.btn_picClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.pnl_credit.SuspendLayout();
             this.pnl_Selection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_policy)).BeginInit();
             this.SuspendLayout();
             // 
             // label16
@@ -571,6 +575,30 @@
             this.pnl_credit.TabIndex = 80;
             this.pnl_credit.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_credit_Paint);
             // 
+            // btn_saveCredit
+            // 
+            this.btn_saveCredit.BackColor = System.Drawing.Color.Orange;
+            this.btn_saveCredit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_saveCredit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_saveCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_saveCredit.ForeColor = System.Drawing.Color.White;
+            this.btn_saveCredit.Location = new System.Drawing.Point(237, 234);
+            this.btn_saveCredit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_saveCredit.Name = "btn_saveCredit";
+            this.btn_saveCredit.Size = new System.Drawing.Size(104, 42);
+            this.btn_saveCredit.TabIndex = 92;
+            this.btn_saveCredit.Text = "Save";
+            this.btn_saveCredit.UseVisualStyleBackColor = false;
+            this.btn_saveCredit.Click += new System.EventHandler(this.btn_saveCredit_Click);
+            // 
+            // dtp_creditDate
+            // 
+            this.dtp_creditDate.Location = new System.Drawing.Point(148, 165);
+            this.dtp_creditDate.Name = "dtp_creditDate";
+            this.dtp_creditDate.Size = new System.Drawing.Size(241, 22);
+            this.dtp_creditDate.TabIndex = 91;
+            this.dtp_creditDate.ValueChanged += new System.EventHandler(this.dtp_creditDate_ValueChanged);
+            // 
             // btn_creditBack
             // 
             this.btn_creditBack.BackColor = System.Drawing.Color.Orange;
@@ -718,19 +746,6 @@
             this.pnl_Selection.Size = new System.Drawing.Size(651, 353);
             this.pnl_Selection.TabIndex = 81;
             // 
-            // lbl_maximum
-            // 
-            this.lbl_maximum.AutoSize = true;
-            this.lbl_maximum.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_maximum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_maximum.ForeColor = System.Drawing.Color.Orange;
-            this.lbl_maximum.Location = new System.Drawing.Point(122, 224);
-            this.lbl_maximum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_maximum.Name = "lbl_maximum";
-            this.lbl_maximum.Size = new System.Drawing.Size(20, 22);
-            this.lbl_maximum.TabIndex = 90;
-            this.lbl_maximum.Text = "0";
-            // 
             // lbl_penalty
             // 
             this.lbl_penalty.AutoSize = true;
@@ -743,6 +758,124 @@
             this.lbl_penalty.Size = new System.Drawing.Size(44, 22);
             this.lbl_penalty.TabIndex = 95;
             this.lbl_penalty.Text = "zero";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Orange;
+            this.label28.Location = new System.Drawing.Point(200, 213);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(15, 22);
+            this.label28.TabIndex = 106;
+            this.label28.Text = "|";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Orange;
+            this.label29.Location = new System.Drawing.Point(200, 189);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(15, 22);
+            this.label29.TabIndex = 105;
+            this.label29.Text = "|";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Orange;
+            this.label31.Location = new System.Drawing.Point(200, 164);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(15, 22);
+            this.label31.TabIndex = 104;
+            this.label31.Text = "|";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Orange;
+            this.label30.Location = new System.Drawing.Point(426, 212);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(15, 22);
+            this.label30.TabIndex = 103;
+            this.label30.Text = "|";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Orange;
+            this.label27.Location = new System.Drawing.Point(426, 188);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(15, 22);
+            this.label27.TabIndex = 100;
+            this.label27.Text = "|";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Orange;
+            this.label25.Location = new System.Drawing.Point(426, 163);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(15, 22);
+            this.label25.TabIndex = 99;
+            this.label25.Text = "|";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Orange;
+            this.label24.Location = new System.Drawing.Point(483, 229);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(120, 22);
+            this.label24.TabIndex = 98;
+            this.label24.Text = "___________";
+            // 
+            // lbl_roomPayment
+            // 
+            this.lbl_roomPayment.AutoSize = true;
+            this.lbl_roomPayment.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_roomPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_roomPayment.ForeColor = System.Drawing.Color.Orange;
+            this.lbl_roomPayment.Location = new System.Drawing.Point(510, 173);
+            this.lbl_roomPayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_roomPayment.Name = "lbl_roomPayment";
+            this.lbl_roomPayment.Size = new System.Drawing.Size(20, 22);
+            this.lbl_roomPayment.TabIndex = 97;
+            this.lbl_roomPayment.Text = "0";
+            // 
+            // lbl_maximum
+            // 
+            this.lbl_maximum.AutoSize = true;
+            this.lbl_maximum.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_maximum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_maximum.ForeColor = System.Drawing.Color.Orange;
+            this.lbl_maximum.Location = new System.Drawing.Point(122, 224);
+            this.lbl_maximum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_maximum.Name = "lbl_maximum";
+            this.lbl_maximum.Size = new System.Drawing.Size(20, 22);
+            this.lbl_maximum.TabIndex = 90;
+            this.lbl_maximum.Text = "0";
             // 
             // label22
             // 
@@ -911,6 +1044,19 @@
             this.label14.TabIndex = 82;
             this.label14.Text = "Rate Rules";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Orange;
+            this.label20.Location = new System.Drawing.Point(254, 173);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(79, 22);
+            this.label20.TabIndex = 96;
+            this.label20.Text = "Charge: ";
+            // 
             // btn_reserved
             // 
             this.btn_reserved.BackColor = System.Drawing.Color.Orange;
@@ -1007,148 +1153,6 @@
             this.label23.TabIndex = 86;
             this.label23.Text = "Room Type:";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Orange;
-            this.label20.Location = new System.Drawing.Point(254, 173);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(79, 22);
-            this.label20.TabIndex = 96;
-            this.label20.Text = "Charge: ";
-            // 
-            // lbl_roomPayment
-            // 
-            this.lbl_roomPayment.AutoSize = true;
-            this.lbl_roomPayment.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_roomPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_roomPayment.ForeColor = System.Drawing.Color.Orange;
-            this.lbl_roomPayment.Location = new System.Drawing.Point(510, 173);
-            this.lbl_roomPayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_roomPayment.Name = "lbl_roomPayment";
-            this.lbl_roomPayment.Size = new System.Drawing.Size(20, 22);
-            this.lbl_roomPayment.TabIndex = 97;
-            this.lbl_roomPayment.Text = "0";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Orange;
-            this.label24.Location = new System.Drawing.Point(483, 229);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(120, 22);
-            this.label24.TabIndex = 98;
-            this.label24.Text = "___________";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Orange;
-            this.label25.Location = new System.Drawing.Point(426, 163);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(15, 22);
-            this.label25.TabIndex = 99;
-            this.label25.Text = "|";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Orange;
-            this.label27.Location = new System.Drawing.Point(426, 188);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(15, 22);
-            this.label27.TabIndex = 100;
-            this.label27.Text = "|";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Orange;
-            this.label30.Location = new System.Drawing.Point(426, 212);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(15, 22);
-            this.label30.TabIndex = 103;
-            this.label30.Text = "|";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Orange;
-            this.label28.Location = new System.Drawing.Point(200, 213);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(15, 22);
-            this.label28.TabIndex = 106;
-            this.label28.Text = "|";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Orange;
-            this.label29.Location = new System.Drawing.Point(200, 189);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(15, 22);
-            this.label29.TabIndex = 105;
-            this.label29.Text = "|";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Orange;
-            this.label31.Location = new System.Drawing.Point(200, 164);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(15, 22);
-            this.label31.TabIndex = 104;
-            this.label31.Text = "|";
-            // 
-            // dtp_creditDate
-            // 
-            this.dtp_creditDate.Location = new System.Drawing.Point(148, 165);
-            this.dtp_creditDate.Name = "dtp_creditDate";
-            this.dtp_creditDate.Size = new System.Drawing.Size(241, 22);
-            this.dtp_creditDate.TabIndex = 91;
-            this.dtp_creditDate.ValueChanged += new System.EventHandler(this.dtp_creditDate_ValueChanged);
-            // 
-            // btn_saveCredit
-            // 
-            this.btn_saveCredit.BackColor = System.Drawing.Color.Orange;
-            this.btn_saveCredit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_saveCredit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_saveCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_saveCredit.ForeColor = System.Drawing.Color.White;
-            this.btn_saveCredit.Location = new System.Drawing.Point(237, 234);
-            this.btn_saveCredit.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_saveCredit.Name = "btn_saveCredit";
-            this.btn_saveCredit.Size = new System.Drawing.Size(104, 42);
-            this.btn_saveCredit.TabIndex = 92;
-            this.btn_saveCredit.Text = "Save";
-            this.btn_saveCredit.UseVisualStyleBackColor = false;
-            this.btn_saveCredit.Click += new System.EventHandler(this.btn_saveCredit_Click);
-            // 
             // lbl_credit
             // 
             this.lbl_credit.AutoSize = true;
@@ -1163,6 +1167,37 @@
             this.lbl_credit.Text = "Payment Complete: ";
             this.lbl_credit.Visible = false;
             // 
+            // btn_policy
+            // 
+            this.btn_policy.BackColor = System.Drawing.Color.Chocolate;
+            this.btn_policy.Location = new System.Drawing.Point(1081, 120);
+            this.btn_policy.Name = "btn_policy";
+            this.btn_policy.Size = new System.Drawing.Size(83, 40);
+            this.btn_policy.TabIndex = 89;
+            this.btn_policy.Text = "POLICY";
+            this.btn_policy.UseVisualStyleBackColor = false;
+            this.btn_policy.Click += new System.EventHandler(this.btn_policy_Click);
+            // 
+            // pic_policy
+            // 
+            this.pic_policy.Location = new System.Drawing.Point(324, 271);
+            this.pic_policy.Name = "pic_policy";
+            this.pic_policy.Size = new System.Drawing.Size(606, 461);
+            this.pic_policy.TabIndex = 90;
+            this.pic_policy.TabStop = false;
+            this.pic_policy.Visible = false;
+            // 
+            // btn_picClose
+            // 
+            this.btn_picClose.BackColor = System.Drawing.Color.Chocolate;
+            this.btn_picClose.Location = new System.Drawing.Point(836, 280);
+            this.btn_picClose.Name = "btn_picClose";
+            this.btn_picClose.Size = new System.Drawing.Size(83, 40);
+            this.btn_picClose.TabIndex = 91;
+            this.btn_picClose.Text = "CLOSE";
+            this.btn_picClose.UseVisualStyleBackColor = false;
+            this.btn_picClose.Click += new System.EventHandler(this.btn_picClose_Click);
+            // 
             // CheckIn2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1173,6 +1208,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1188, 914);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_picClose);
+            this.Controls.Add(this.pic_policy);
+            this.Controls.Add(this.btn_policy);
             this.Controls.Add(this.pnl_Selection);
             this.Controls.Add(this.pnl_credit);
             this.Controls.Add(this.label7);
@@ -1225,6 +1263,7 @@
             this.pnl_credit.PerformLayout();
             this.pnl_Selection.ResumeLayout(false);
             this.pnl_Selection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_policy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1305,5 +1344,8 @@
         private System.Windows.Forms.Button btn_saveCredit;
         private System.Windows.Forms.Label lbl_credit;
         protected internal System.Windows.Forms.Panel pnl_Selection;
+        private System.Windows.Forms.Button btn_policy;
+        private System.Windows.Forms.PictureBox pic_policy;
+        private System.Windows.Forms.Button btn_picClose;
     }
 }

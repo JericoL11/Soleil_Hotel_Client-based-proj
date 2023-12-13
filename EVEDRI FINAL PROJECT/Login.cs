@@ -45,26 +45,55 @@ namespace EVEDRI_FINAL_PROJECT
             var accounts_data = _data.tbl_accounts
                   .FirstOrDefault(acc => acc.acc_User == txt_username.Text
                           && acc.acc_Pass == txt_password.Text);
-
-            if (Admin_data != null)
+            
+            if (string.IsNullOrEmpty(cmb_userType.Text))
             {
-                login_success();
+                SelectType();
 
-                Admin ad = new Admin();
-                this.Hide();
-                ad.Show();
-            }
-            else if (accounts_data != null)
-            {
-                login_success();
-                Dashboard d = new Dashboard();
-                this.Hide();
-                d.Show();
             }
             else
             {
-                login_fail();
+
+                switch (cmb_userType.SelectedIndex)
+                {
+                    case 0:
+                        if (accounts_data != null)
+                        {
+                            login_success();
+                            Dashboard d = new Dashboard();
+                            this.Hide();
+                            d.Show();
+
+                        }
+                        else
+                        {
+                            login_fail();
+                        }
+                        break;
+                    case 1:
+
+                        if (Admin_data != null)
+                        {
+                            login_success();
+
+                            Admin ad = new Admin();
+                            this.Hide();
+                            ad.Show();
+                        }
+                        else
+                        {
+                            login_fail();
+                        }
+                        break;
+
+                    default:
+
+                        break;
+                }
+
             }
+
+
         }
 
 
@@ -83,11 +112,20 @@ namespace EVEDRI_FINAL_PROJECT
                 string message = "Successfully login";
                 MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        public void SelectType()
+        {
+            string title = "Notification";
+            string message = "Please Select user type";
+            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         private void Login_Load(object sender, EventArgs e)
         {
             btn_login.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_login.Width, btn_login.Height, 20,20));
             button2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button2.Width, button2.Height, 17, 17 ));
+
+
+            cmb_userType.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

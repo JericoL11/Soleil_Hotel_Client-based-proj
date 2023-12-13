@@ -51,6 +51,7 @@ Create Table tbl_Guest(
 	CheckOut nvarchar(30) default 'TBU',
 	NoOfDays nvarchar(30) default 'TBU',
 	IsSettled nvarchar(30) default 'TBU',
+	IsClean nvarchar(30) default 'TBU',
 )
 
 
@@ -93,11 +94,11 @@ where staff_id = 23003;
 --Create Table tbl_Rooms(
 --Create Table tbl_CheckIn(
 --Create Table tbl_CheckOut(
-Drop table tbl_Rooms
+Drop table tbl_Guest
 
- tbl_Staff
-tbl_Admin
-tbl_account
+ 
+--tbl_Admin
+--tbl_account
 select * from tbl_Admin
 
 

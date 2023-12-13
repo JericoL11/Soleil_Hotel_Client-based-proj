@@ -35,6 +35,8 @@
             this.txt_username = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmb_userType = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(185, 486);
+            this.label4.Location = new System.Drawing.Point(185, 468);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 24);
@@ -82,7 +84,7 @@
             // txt_password
             // 
             this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.Location = new System.Drawing.Point(320, 486);
+            this.txt_password.Location = new System.Drawing.Point(320, 466);
             this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
@@ -107,7 +109,7 @@
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(356, 558);
+            this.btn_login.Location = new System.Drawing.Point(362, 527);
             this.btn_login.Margin = new System.Windows.Forms.Padding(4);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(176, 55);
@@ -128,6 +130,31 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // cmb_userType
+            // 
+            this.cmb_userType.FormattingEnabled = true;
+            this.cmb_userType.Items.AddRange(new object[] {
+            "User",
+            "Admin"});
+            this.cmb_userType.Location = new System.Drawing.Point(320, 353);
+            this.cmb_userType.Name = "cmb_userType";
+            this.cmb_userType.Size = new System.Drawing.Size(102, 24);
+            this.cmb_userType.TabIndex = 23;
+            this.cmb_userType.Text = "------------------";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(190, 353);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 24);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "User Type";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,6 +163,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(790, 710);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmb_userType);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_username);
             this.Controls.Add(this.pictureBox1);
@@ -166,5 +195,7 @@
         private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmb_userType;
+        private System.Windows.Forms.Label label1;
     }
 }

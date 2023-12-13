@@ -185,4 +185,33 @@
       <Column Name="CheckOut" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.SP_Admin_DelEmployee" Method="SP_Admin_DelEmployee">
+    <Parameter Name="emp_Id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Admin_addUser" Method="SP_Admin_addUser">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="passsword" Type="System.String" DbType="NVarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Admin_DelUser" Method="SP_Admin_DelUser">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Admin_ViewAccounts" Method="SP_Admin_ViewAccounts">
+    <ElementType Name="SP_Admin_ViewAccountsResult">
+      <Column Name="acc_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Admin_addEmployee" Method="SP_Admin_addEmployee">
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="position" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="phone" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="address" Type="System.String" DbType="NVarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

@@ -46,6 +46,7 @@
             this.btn_enter = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnl_guestID.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,12 +54,13 @@
             // txt_phone
             // 
             this.txt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phone.Location = new System.Drawing.Point(334, 586);
-            this.txt_phone.MaxLength = 11;
+            this.txt_phone.Location = new System.Drawing.Point(383, 586);
+            this.txt_phone.MaxLength = 9;
             this.txt_phone.Multiline = true;
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(331, 43);
-            this.txt_phone.TabIndex = 49;
+            this.txt_phone.Size = new System.Drawing.Size(127, 43);
+            this.txt_phone.TabIndex = 4;
+            this.txt_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_phone.TextChanged += new System.EventHandler(this.txt_phone_TextChanged);
             this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phone_KeyPress);
             // 
@@ -69,7 +71,7 @@
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(331, 43);
-            this.txt_email.TabIndex = 48;
+            this.txt_email.TabIndex = 3;
             // 
             // txt_lname
             // 
@@ -78,7 +80,7 @@
             this.txt_lname.Multiline = true;
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(331, 43);
-            this.txt_lname.TabIndex = 47;
+            this.txt_lname.TabIndex = 1;
             // 
             // txt_fname
             // 
@@ -87,7 +89,7 @@
             this.txt_fname.Multiline = true;
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(331, 43);
-            this.txt_fname.TabIndex = 46;
+            this.txt_fname.TabIndex = 2;
             // 
             // btn_next
             // 
@@ -100,7 +102,7 @@
             this.btn_next.Margin = new System.Windows.Forms.Padding(4);
             this.btn_next.Name = "btn_next";
             this.btn_next.Size = new System.Drawing.Size(132, 47);
-            this.btn_next.TabIndex = 44;
+            this.btn_next.TabIndex = 6;
             this.btn_next.Text = "NEXT";
             this.btn_next.UseVisualStyleBackColor = false;
             this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
@@ -178,6 +180,7 @@
             this.txt_guestID.Name = "txt_guestID";
             this.txt_guestID.Size = new System.Drawing.Size(179, 38);
             this.txt_guestID.TabIndex = 50;
+            this.txt_guestID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_guestID_KeyPress);
             // 
             // label2
             // 
@@ -199,7 +202,7 @@
             this.lnk_guestId.Location = new System.Drawing.Point(330, 653);
             this.lnk_guestId.Name = "lnk_guestId";
             this.lnk_guestId.Size = new System.Drawing.Size(165, 22);
-            this.lnk_guestId.TabIndex = 52;
+            this.lnk_guestId.TabIndex = 5;
             this.lnk_guestId.TabStop = true;
             this.lnk_guestId.Text = "Existing Customer?";
             this.lnk_guestId.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_guestId_LinkClicked);
@@ -257,7 +260,7 @@
             this.btn_back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(132, 47);
-            this.btn_back.TabIndex = 54;
+            this.btn_back.TabIndex = 7;
             this.btn_back.Text = "BACK";
             this.btn_back.UseVisualStyleBackColor = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
@@ -273,6 +276,17 @@
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(334, 586);
+            this.textBox1.MaxLength = 9;
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(51, 43);
+            this.textBox1.TabIndex = 56;
+            this.textBox1.Text = "+63";
+            // 
             // CheckInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -282,6 +296,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(838, 837);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.pnl_guestID);
             this.Controls.Add(this.lnk_guestId);
@@ -332,5 +347,6 @@
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
